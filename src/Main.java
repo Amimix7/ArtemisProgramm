@@ -1,17 +1,33 @@
+import javax.swing.plaf.synth.SynthTextAreaUI;
+import java.util.Scanner;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Eingabe with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Umschalt+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.println("Hallo, ..!!");
 
-            // Press Umschalt+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Strg+F8.
-            System.out.println("i = " + i);
+
+        Scanner input = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("wie geht es dir? (gut; schlecht)");
+
+        String userInput = input.nextLine();  // Read user input
+
+
+        if (userInput.equals( "gut")){
+            System.out.println("toll");
+        }else if (userInput.equals("schlecht")){
+            System.out.println("aha?");
+            System.out.println("wieso? (schlaf)");
+
+            userInput = input.nextLine();
+            if (userInput.equals("schlaf")){
+                System.out.println("oh nein!");
+            }
         }
+
+
+
     }
 }
